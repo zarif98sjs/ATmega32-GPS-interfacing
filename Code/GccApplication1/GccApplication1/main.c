@@ -1,14 +1,3 @@
-# **`ATmega32 GPS interfacing`**
-
- Interfacing GPS module with ATmega32
-
-# `Circuit`
-
-![](Circuit/image.png)
-
-# `Code`
-
-```c++
 #ifndef F_CPU
 #define F_CPU 16000000UL // 16 MHz clock speed
 #endif
@@ -166,6 +155,3 @@ unsigned int usart_getch()
 	while (!(UCSRA & (1 << RXC))); // Do nothing until data have been recieved and is ready to be read from UDR
 	return(UDR); // return the byte
 }
-```
-
-find the header files [here](Code/GccApplication1/GccApplication1)
